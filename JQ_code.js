@@ -31,11 +31,14 @@ $(document).ready(function () {
       });
  
 addEventListener('DOMSubtreeModified', function (e) {
-	if(e.target.tagName.match( "HTML") ){	
+	if(e.target.tagName.match( "HTML") ){
+		console.log(e.target);
+		console.log(e.target.tagName);
+		console.log(e.target.className);
 		if(e.target.classList[1] =='translated-ltr' || e.target.classList[1]=='translated-rtl' || e.target.className=="translated-ltr" || e.target.className=="translated-rtl || e.target.className=='gr__requester_mturk_com translated-ltr' || e.target.className=='gr__requester_mturk_com translated-rtl'") {
-			not_eng_worker =1
+			$('#not_eng_worker').val("1");
 			alert("page has been translated and translation was canceled");
-			console.log(not_eng_worker)
+			console.log(not_eng_worker.value)
          };
      }
 }, true);
