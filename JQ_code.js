@@ -35,7 +35,7 @@ addEventListener('DOMSubtreeModified', function (e) {
 		console.log(e.target);
 		console.log(e.target.tagName);
 		console.log(e.target.className);
-		if(e.target.classList[1] =='translated-ltr' || e.target.classList[1]=='translated-rtl') {
+		if(e.target.classList[1] =='translated-ltr' || e.target.classList[1]=='translated-rtl' || e.target.className=="translated-ltr" || e.target.className=="translated-rtl) {
 			$('#not_eng_worker').val("1");
 			alert("page has been translated and translation was canceled");
 			console.log(not_eng_worker.value)
